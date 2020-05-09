@@ -1,51 +1,158 @@
-"id" 
+"id"  int
   Observation Identifier 
   Unique identifier for each observation 
-
-"subject_id"
+    1...180
+"subject_id" int
   Subject Identifier 
   Unique identifier for each participant 
- [3] "activity"                             "tbodyacc-mean()-x"                   
- [5] "tbodyacc-mean()-y"                    "tbodyacc-mean()-z"                   
- [7] "tbodyacc-std()-x"                     "tbodyacc-std()-y"                    
- [9] "tbodyacc-std()-z"                     "tgravityacc-mean()-x"                
-[11] "tgravityacc-mean()-y"                 "tgravityacc-mean()-z"                
-[13] "tgravityacc-std()-x"                  "tgravityacc-std()-y"                 
-[15] "tgravityacc-std()-z"                  "tbodyaccjerk-mean()-x"               
-[17] "tbodyaccjerk-mean()-y"                "tbodyaccjerk-mean()-z"               
-[19] "tbodyaccjerk-std()-x"                 "tbodyaccjerk-std()-y"                
-[21] "tbodyaccjerk-std()-z"                 "tbodygyro-mean()-x"                  
-[23] "tbodygyro-mean()-y"                   "tbodygyro-mean()-z"                  
-[25] "tbodygyro-std()-x"                    "tbodygyro-std()-y"                   
-[27] "tbodygyro-std()-z"                    "tbodygyrojerk-mean()-x"              
-[29] "tbodygyrojerk-mean()-y"               "tbodygyrojerk-mean()-z"              
-[31] "tbodygyrojerk-std()-x"                "tbodygyrojerk-std()-y"               
-[33] "tbodygyrojerk-std()-z"                "tbodyaccmag-mean()"                  
-[35] "tbodyaccmag-std()"                    "tgravityaccmag-mean()"               
-[37] "tgravityaccmag-std()"                 "tbodyaccjerkmag-mean()"              
-[39] "tbodyaccjerkmag-std()"                "tbodygyromag-mean()"                 
-[41] "tbodygyromag-std()"                   "tbodygyrojerkmag-mean()"             
-[43] "tbodygyrojerkmag-std()"               "fbodyacc-mean()-x"                   
-[45] "fbodyacc-mean()-y"                    "fbodyacc-mean()-z"                   
-[47] "fbodyacc-std()-x"                     "fbodyacc-std()-y"                    
-[49] "fbodyacc-std()-z"                     "fbodyacc-meanfreq()-x"               
-[51] "fbodyacc-meanfreq()-y"                "fbodyacc-meanfreq()-z"               
-[53] "fbodyaccjerk-mean()-x"                "fbodyaccjerk-mean()-y"               
-[55] "fbodyaccjerk-mean()-z"                "fbodyaccjerk-std()-x"                
-[57] "fbodyaccjerk-std()-y"                 "fbodyaccjerk-std()-z"                
-[59] "fbodyaccjerk-meanfreq()-x"            "fbodyaccjerk-meanfreq()-y"           
-[61] "fbodyaccjerk-meanfreq()-z"            "fbodygyro-mean()-x"                  
-[63] "fbodygyro-mean()-y"                   "fbodygyro-mean()-z"                  
-[65] "fbodygyro-std()-x"                    "fbodygyro-std()-y"                   
-[67] "fbodygyro-std()-z"                    "fbodygyro-meanfreq()-x"              
-[69] "fbodygyro-meanfreq()-y"               "fbodygyro-meanfreq()-z"              
-[71] "fbodyaccmag-mean()"                   "fbodyaccmag-std()"                   
-[73] "fbodyaccmag-meanfreq()"               "fbodybodyaccjerkmag-mean()"          
-[75] "fbodybodyaccjerkmag-std()"            "fbodybodyaccjerkmag-meanfreq()"      
-[77] "fbodybodygyromag-mean()"              "fbodybodygyromag-std()"              
-[79] "fbodybodygyromag-meanfreq()"          "fbodybodygyrojerkmag-mean()"         
-[81] "fbodybodygyrojerkmag-std()"           "fbodybodygyrojerkmag-meanfreq()"     
-[83] "angle(tbodyaccmean,gravity)"          "angle(tbodyaccjerkmean),gravitymean)"
-[85] "angle(tbodygyromean,gravitymean)"     "angle(tbodygyrojerkmean,gravitymean)"
-[87] "angle(x,gravitymean)"                 "angle(y,gravitymean)"                
-[89] "angle(z,gravitymean)" 
+    1...30
+ 
+"activity"  factor
+  Activity that participant was involved in when measurements were taken. 
+    WALKING 
+    WALKING_UPSTAIRS
+    WALKING_DOWNSTAIRS
+    SITTING
+    STANDING
+    LAYING
+    
+"tbodyacc-mean()-x" num
+  Average of the mean time-domain body acceleration signal on the x axis 
+    [-1,1]
+    
+"tbodyacc-mean()-y" num  
+  Average of the mean time-domain body acceleration signal on the y axis 
+    [-1,1]
+    
+"tbodyacc-mean()-z" num
+  Average of the mean time-domain body acceleration signal on the z axis 
+    [-1,1]
+    
+"tbodyacc-std()-x"  num
+  Average of the standard deviation of time-domain body acceleration signal on the x axis 
+    [-1,1]
+    
+"tbodyacc-std()-y"  num  
+  Average of the standard deviation time-domain body acceleration signal on the y axis 
+    [-1,1]
+    
+"tbodyacc-std()-z" num
+  Average of the standard deviation time-domain body acceleration signal on the z axis 
+    [-1,1]
+
+"tgravityacc-mean()-x" num 
+  Average mean time-domain gravity acceleration signal on the x axis
+    [-1,1]
+  
+"tgravityacc-mean()-y"  num   
+  Average mean time-domain gravity acceleration signal on the y axis
+    [-1,1]
+    
+"tgravityacc-mean()-z" num
+  Average mean time-domain gravity acceleration signal on the z axis
+    [-1,1]
+    
+"tgravityacc-std()-x" num
+  Average standard deviation time-domain gravity acceleration signal on the x axis
+    [-1,1]
+    
+"tgravityacc-std()-y"  num
+  Average standard deviation time-domain gravity acceleration signal on the y axis
+    [-1,1]
+    
+"tgravityacc-std()-z"  num
+  Average mean time-domain gravity acceleration signal on the z axis
+    [-1,1]
+    
+"tbodyaccjerk-mean()-x" num   
+  Average mean time-domain linear acceleration jerk signal on the x axis
+    [-1,1]
+    
+"tbodyaccjerk-mean()-y"  num   
+  Average mean time-domain linear acceleration jerk signal on the y axis
+    [-1,1]
+             
+"tbodyaccjerk-mean()-z"    num   
+  Average mean time-domain linear acceleration jerk signal on the z axis
+    [-1,1]
+                
+"tbodyaccjerk-std()-x"     num   
+  Average standard deviation time-domain linear acceleration jerk signal on the x axis
+    [-1,1]
+           
+"tbodyaccjerk-std()-y"       num   
+  Average standard deviation time-domain linear acceleration jerk signal on the y axis
+    [-1,1]
+              
+"tbodyaccjerk-std()-z"        num   
+  Average standard deviation time-domain linear acceleration jerk signal on the z axis
+    [-1,1]
+           
+"tbodygyro-mean()-x"                  
+"tbodygyro-mean()-y"        
+"tbodygyro-mean()-z"                  
+"tbodygyro-std()-x"     
+"tbodygyro-std()-y"                   
+"tbodygyro-std()-z"   
+"tbodygyrojerk-mean()-x"              
+"tbodygyrojerk-mean()-y"    
+"tbodygyrojerk-mean()-z"              
+"tbodygyrojerk-std()-x"    
+"tbodygyrojerk-std()-y"               
+"tbodygyrojerk-std()-z"  
+"tbodyaccmag-mean()"                  
+"tbodyaccmag-std()"         
+"tgravityaccmag-mean()"               
+"tgravityaccmag-std()"        
+"tbodyaccjerkmag-mean()"              
+"tbodyaccjerkmag-std()"        
+"tbodygyromag-mean()"                 
+"tbodygyromag-std()"               
+"tbodygyrojerkmag-mean()"             
+"tbodygyrojerkmag-std()"       
+"fbodyacc-mean()-x"                   
+"fbodyacc-mean()-y"     
+"fbodyacc-mean()-z"                   
+"fbodyacc-std()-x"           
+"fbodyacc-std()-y"                    
+"fbodyacc-std()-z"         
+"fbodyacc-meanfreq()-x"               
+"fbodyacc-meanfreq()-y"        
+"fbodyacc-meanfreq()-z"               
+"fbodyaccjerk-mean()-x"     
+"fbodyaccjerk-mean()-y"               
+"fbodyaccjerk-mean()-z"     
+"fbodyaccjerk-std()-x"                
+"fbodyaccjerk-std()-y"    
+"fbodyaccjerk-std()-z"                
+"fbodyaccjerk-meanfreq()-x"        
+"fbodyaccjerk-meanfreq()-y"           
+"fbodyaccjerk-meanfreq()-z"      
+"fbodygyro-mean()-x"                  
+"fbodygyro-mean()-y"     
+"fbodygyro-mean()-z"                  
+"fbodygyro-std()-x"   
+"fbodygyro-std()-y"                   
+"fbodygyro-std()-z"             
+"fbodygyro-meanfreq()-x"              
+"fbodygyro-meanfreq()-y"         
+"fbodygyro-meanfreq()-z"              
+"fbodyaccmag-mean()"            
+"fbodyaccmag-std()"                   
+"fbodyaccmag-meanfreq()"          
+"fbodybodyaccjerkmag-mean()"          
+"fbodybodyaccjerkmag-std()"       
+"fbodybodyaccjerkmag-meanfreq()"      
+"fbodybodygyromag-mean()"          
+"fbodybodygyromag-std()"              
+"fbodybodygyromag-meanfreq()"       
+"fbodybodygyrojerkmag-mean()"         
+"fbodybodygyrojerkmag-std()"         
+"fbodybodygyrojerkmag-meanfreq()"     
+"angle(tbodyaccmean,gravity)"      
+"angle(tbodyaccjerkmean),gravitymean)"
+"angle(tbodygyromean,gravitymean)"   
+"angle(tbodygyrojerkmean,gravitymean)"
+"angle(x,gravitymean)"       
+"angle(y,gravitymean)"                
+"angle(z,gravitymean)" 
