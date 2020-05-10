@@ -74,6 +74,7 @@
   names(final_data)<-gsub("-"," ",names(final_data))
   names(final_data)<-gsub("\\()","",names(final_data))
   
+  #****Note Completes Part 4: ***   
   #create more descriptive variable names
   names(final_data)<-gsub("std","standard deviation",names(final_data))
   names(final_data)<-gsub("\\bx\\b","x-axis",names(final_data))
